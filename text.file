@@ -1,0 +1,250 @@
+# GIT + VS CODE TERMINAL CHEAT SHEET
+
+# Windows PowerShell | HTML | CSS | GitHub
+
+========================================
+
+1. CHECK YOUR PROJECT
+   ========================================
+
+Show current folder:
+pwd
+
+List files and folders:
+ls
+
+Check Git status:
+git status
+
+Check connected GitHub repository:
+git remote -v
+
+========================================
+2. NAVIGATE FOLDERS
+===================
+
+Go into a folder:
+cd foldername
+
+Go up one folder:
+cd ..
+
+Go to Desktop:
+cd "C:\Users\didri\Desktop"
+
+Clear terminal:
+clear
+
+Open current folder in VS Code:
+code .
+
+========================================
+3. CREATE AND OPEN FILES
+========================
+
+Create an HTML file:
+New-Item index.html -ItemType File
+
+Create a CSS file:
+New-Item style.css -ItemType File
+
+Create a JavaScript file:
+New-Item script.js -ItemType File
+
+Create a folder:
+mkdir images
+
+Open HTML file in VS Code:
+code index.html
+
+Open CSS file in VS Code:
+code style.css
+
+Open JavaScript file in VS Code:
+code script.js
+
+Open HTML file in browser:
+start index.html
+
+========================================
+4. GIT COMMANDS
+===============
+
+Initialize Git:
+git init
+
+Check status:
+git status
+
+Show changes not yet staged:
+git diff
+
+Show staged changes:
+git diff --cached
+
+Stage one HTML file:
+git add index.html
+
+Stage one CSS file:
+git add style.css
+
+Stage multiple specific files:
+git add index.html style.css
+
+Stage all changes in current folder:
+git add .
+
+Unstage a file without deleting edits:
+git restore --staged index.html
+
+Commit staged changes:
+git commit -m "Update website"
+
+Upload commits to GitHub:
+git push
+
+Download and integrate changes from GitHub:
+git pull
+
+Show recent commits:
+git log --oneline
+
+Show GitHub connection:
+git remote -v
+
+========================================
+5. UPLOAD ONLY THE FILES YOU WANT
+=================================
+
+Check changed files:
+git status
+
+Stage only the files you want:
+git add index.html style.css
+
+Review selected changes:
+git diff --cached
+
+Commit selected changes:
+git commit -m "Update HTML and CSS"
+
+Push commits to GitHub:
+git push
+
+IMPORTANT:
+Only the staged changes go into this commit.
+However, git push sends ALL unpushed commits
+on the current branch, not just one file.
+
+========================================
+6. DAILY WINDOWS AND MAC WORKFLOW
+=================================
+
+BEFORE STARTING WORK:
+
+git status
+git pull
+
+CODE YOUR WEBSITE:
+
+Edit HTML and CSS in VS Code.
+Save with Ctrl + S on Windows.
+Save with Cmd + S on Mac.
+
+WHEN FINISHED:
+
+git status
+git add index.html style.css
+git diff --cached
+git commit -m "Update website"
+git push
+
+WHEN SWITCHING COMPUTERS:
+
+1. Save your work.
+2. Commit and push on the computer you're leaving.
+3. Open the same repository on the other computer.
+4. Run git pull.
+5. Continue coding.
+
+========================================
+7. CLONE A REPOSITORY
+=====================
+
+Clone a GitHub repository:
+
+git clone https://github.com/USERNAME/REPOSITORY.git
+
+IMPORTANT:
+Replace the URL with your actual repository URL.
+Run this from the parent folder where you want
+the new project folder to be created.
+Clone only once per computer.
+
+========================================
+8. CONNECT AN EXISTING LOCAL PROJECT
+====================================
+
+Initialize Git:
+git init
+
+Add your GitHub repository:
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+
+Rename your branch:
+git branch -M main
+
+Stage files:
+git add index.html style.css
+
+Commit:
+git commit -m "Initial commit"
+
+Push:
+git push -u origin main
+
+IMPORTANT:
+Use this setup only if you need to connect an
+existing local project to a remote repository.
+If you already cloned the repository, do not
+repeat these setup commands.
+
+========================================
+9. COMMON PROBLEMS
+==================
+
+"Not a git repository":
+Check your folder using pwd and ls.
+Navigate into the correct project folder.
+
+"Nothing to commit":
+Run git status and check your changes.
+
+"Push rejected":
+Check the error message and whether GitHub
+has commits you don't have locally.
+Save your local work before pulling.
+
+"code is not recognized":
+Open files through the VS Code Explorer.
+
+========================================
+10. IMPORTANT SECURITY RULES
+============================
+
+Do not upload passwords or API keys.
+
+Keep .env files out of GitHub.
+
+Do not upload node_modules or .venv folders.
+
+Use .gitignore for files you don't want tracked.
+
+Always check git status before committing.
+
+Always pull before starting work on the
+other computer, after pushing from the first.
+
+========================================
+END OF CHEAT SHEET
+==================
